@@ -1,0 +1,143 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+body {
+   
+    background: #282d34;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+.landing-wrapper {
+    height: 100%;
+    width: 100%;
+}
+ .container-fluid {
+    width: 100%;
+ }
+
+.slider {
+    width: 100%;
+}
+
+.slider input {
+    display: none;
+}
+
+
+.testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 440px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.testimonials .item {
+    width: 300px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgba(230, 230, 230);
+    position: absolute;
+    border: 3px solid white;
+    top: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.4s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots label {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #413b52;
+    margin: 7px;
+    transition-duration: 0.2s;
+}
+
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-1"] {
+    transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+    z-index: 3;
+}
+
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-1:checked ~ .testimonials label[for="t-3"] {
+    transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+    z-index: 3;
+}
+
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"] {
+    z-index: 4;
+}
+
+.thumbnail {
+    margin: 0 0 48px;
+}
+
+.title {
+    margin: 0 0 12px;
+    color: #2d4059;
+    font-size: 24px;
+    transition: 0.5s ease;
+}
+
+.description {
+    margin: 0 0 48px;
+}
+
+.img {
+    width: 40%;
+}
+
+.bg-blue-khfif {
+    background-color: #4f719d;
+    color: #1c2837;
+}
+
+.bgd-gray {
+    background-color: #e6e6e6;
+    color: #3e587b;
+}
+
+.color-btn-1 {
+    background-color: #18375f;
+    color: #fff;
+}
+
+.color-bnt-txt {
+    color: #274060;
+}
+.ktaba{
+    color: #fff
+}
+.thumbnail{
+    background-color: rgba(230, 230, 230);
+}

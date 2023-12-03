@@ -1,0 +1,45 @@
+.home-section {
+    background: url('assets/carpool.jpg') center/cover no-repeat; 
+    color: rgb(11, 10, 10);
+    text-align: center;
+    padding: 100px 0;
+    width: 100%;
+  
+  }
+  
+  .home-section h1 {
+    font-size: 3em;
+  }
+  
+  .home-section p {
+    font-size: 1.2em;
+  }
+  
+  .home-section button {
+    margin-top: 20px;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body, html {
+ 
+  height: 100%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+.col-md-15 {
+  text-align: center; /* Align text to the right */
+  color: white; /* Set text color to white */
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+
