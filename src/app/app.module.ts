@@ -21,6 +21,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddOfferComponent } from './add-offer/add-offer.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
+    AddOfferComponent,
   ],
   imports: [
     BrowserModule,
