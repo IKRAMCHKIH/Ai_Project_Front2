@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+
+  <div id="id01" class="modal" style="display: block;">
+    <form class="modal-content animate" action="/action_page.php" method="post" style="width:80%">
+      <div class="container1">
+        <h2>Add New Offer</h2>
+  
+        <label for="fullName"><b>Nom et prénom du conducteur</b></label>
+        <input class="form-control" [(ngModel)]="user.fullName" type="text" placeholder="Enter Nom et prénom du conducteur" name="fullName" required>
+  
+        <label for="companyName"><b>Marque de voiture</b></label>
+        <input class="form-control" [(ngModel)]="user.companyName" type="text" placeholder="Enter Marque de voiture" name="companyName" required>
+  
+        <label for="employeeId"><b>Destination</b></label>
+        <input class="form-control" type="text" [(ngModel)]="user.employeeId" placeholder="Enter Destination" name="destination" required>
+  
+        <label for="email"><b>Depart</b></label>
+        <input class="form-control" type="text" [(ngModel)]="user.email" placeholder="Enter Depart" name="depart" required>
+  
+        <label for="date"><b>Date</b></label>
+        <input class="form-control" type="date" [(ngModel)]="user.date" name="date" required>
+  
+        <label for="heure"><b>Heure</b></label>
+        <div class="input-group">
+          <select class="form-control" [(ngModel)]="user.selectedHour" name="selectedHour" required>
+            <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
+          </select>
+          <span>:</span>
+          <select class="form-control" [(ngModel)]="user.selectedMinute" name="selectedMinute" required>
+            <option *ngFor="let minute of minutes" [value]="minute">{{ minute }}</option>
+          </select>
+        </div>
+        
+
+        <label for="nbrPlaces"><b>Nbr de places</b></label>
+        <input class="form-control" type="number" [(ngModel)]="user.nbrPlaces" placeholder="Enter Nbr de places" name="nbrPlaces" min="1" max="5" required>
+  
+        <label for="password"><b>Prix de place</b></label>
+        <input class="form-control" type="text" [(ngModel)]="user.password" placeholder="Enter Prix de place" name="prixPlace" required>
+  
+        <button (click)="createUser()">Submit</button>
+      </div>
+  
+      <div class="container1" style="background-color:#f1f1f1">
+        <button type="button" routerLink="" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
