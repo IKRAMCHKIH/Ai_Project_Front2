@@ -9,6 +9,7 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { DisplayOffreComponent } from './display-offre/display-offre.component';
 
 
 
@@ -24,9 +25,9 @@ const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'userDashboard', component: UserDashboardComponent },
   { path: 'adminDashboard', component: AdminDashboardComponent },
-
-   { path: 'ikr', component: HomeComponent }
-
+  { path: 'displayOffre', component: DisplayOffreComponent },
+   { path: 'ikr', component: HomeComponent },
+   
 ];
 
 @NgModule({
