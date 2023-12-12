@@ -1,19 +1,9 @@
-<div class="container-fluid">
+ <div class="container-fluid"> 
 
   <app-navbar></app-navbar>
 
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="w3-container w3-padding-34" style="max-width:1700px">
   <br/>
-
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card w3-hide-large w3-hide-medium">
-  <a routerLink="/home" class="w3-bar-item w3-button"><b> <img src="https://icon-library.net/images/car-icon-images/car-icon-images-12.jpg" style="width:25px;height:25px"></b> Car Pool</a>
-    <div style="display: inline-flex;" class="">
-      <a routerLink="/home" class="w3-bar-item w3-button">Home</a>
-      <a  routerLink="/register" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">Register</a>
-      <a  routerLink="/login" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">User Login</a>
-      <a  routerLink="/adminlogin" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">Company Login</a>
-    </div>
-  </div>
   <div id="hero" class="d-flex flex-column pt-4 px-4 lg-px-8 overflow-hidden" style="background: radial-gradient(77.36% 256.97% at 77.36% 57.52%, 100%); clip-path: ellipse(150% 87% at 93% 13%);">
 <br/>
 
@@ -21,11 +11,13 @@
   <section class="home-section">
     <div class="container">
       <div class="row">
+      
         <div class="col-md-15">
           <h1>Carpooling</h1>
           <p>
-            Carpooling is a convenient and eco-friendly way to travel. Join our community and start sharing rides today!
+            Carpooling is a convenient and eco-friendly way to travel. 
           </p>
+          <p>Join our community and start sharing rides today!</p>
           <button class="w3-button w3-section" type="submit" style="background-color: #26374c; color: white;">
            Pool You Car Now
         </button>
@@ -87,5 +79,5 @@ By having more people using one vehicle, carpooling reduces each person's travel
     </button>
     </form>
   </div>
-</div>
+</div> 
 <app-footer></app-footer>

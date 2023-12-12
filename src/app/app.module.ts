@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DisplayOffreComponent } from './display-offre/display-offre.component';
+import { AddOfferComponent } from './add-offer/add-offer.component';
 
 
 
@@ -40,6 +41,7 @@ import { DisplayOffreComponent } from './display-offre/display-offre.component';
     NavbarComponent,
     FooterComponent,
     DisplayOffreComponent,
+    AddOfferComponent,
   ],
   imports: [
     BrowserModule,

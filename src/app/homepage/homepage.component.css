@@ -1,10 +1,14 @@
 .home-section {
-  background: url('assets/carpool.jpg') center/cover no-repeat; 
-     color: rgb(11, 10, 10);
-    text-align: center;
+     background: url('assets/carpool.jpg') center/cover no-repeat;  
+    color: rgb(11, 10, 10);
+    /* text-align: center; */
     padding: 100px 0;
     width: 100%;
   
+  }
+  #hero {
+    margin-left: -15px; /* Remove default container padding on the left */
+    margin-right: -15px; /* Remove default container padding on the right */
   }
   
   .home-section h1 {
@@ -34,12 +38,18 @@ body, html {
   height: 50%;
 }
 .col-md-15 {
-  text-align: center; /* Align text to the right */
+  text-align: left; /* Align text to the right */
   color: white; /* Set text color to white */
 }
 
 .container-fluid {
   padding: 0;
+ 
 }
+#hero {
+  position: relative; /* Position the hero section */
+ 
+}
+
 
 
