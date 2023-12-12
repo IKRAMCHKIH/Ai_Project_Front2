@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="mt-5 mx-5 row mb-4">
+        <div class="col-md-3">
+            <input type="text" class="form-control custom-input" placeholder="Departure" [(ngModel)]="searchParams.departure">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control custom-input" placeholder="Destination" [(ngModel)]="searchParams.destination">
+        </div>
+        <div class="col-md-3">
+            <input type="date" class="form-control custom-input" [(ngModel)]="searchParams.date">
+        </div>
+        <div class="col-md-3 d-flex justify-content-between">
+            <button (click)="searchRides()" class="rounded-pill button-search btn btn-block">
+                <span class="pi pi-search"></span> Search
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4" *ngFor="let ride of filteredRides; let even = even">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <div class="row g-0">
+                        <div class="image col-md-5">
+                            <img src="{{ ride.imageUrl }}" alt="{{ ride.driverName }}" class="card-img-top styled-image" style="height: 200px; object-fit: cover;">
+                            <h5 class="card-title "> {{ ride.driverName }}</h5>
+                        </div>
+                        <div class=" info col-md-7">
+
+                            <p class="card-text destination"><span class="badge bg-secondary">From:</span> {{ ride.departure }} | <span class="badge bg-secondary">To:</span> {{ ride.destination }}</p>
+                            <p class="card-text">
+                                <span class="badge bg-secondary">Date:</span> {{ ride.date }} | <span class="badge bg-secondary">Time:</span> {{ ride.time }}
+                            </p>
+                            <p class="card-text">
+                                <span class="badge bg-secondary">Price:</span> {{ ride.price }} dhs
+                            </p>
+                            <p class="card-text"><strong>Available Places:</strong> {{ ride.availablePlaces }}</p>
+                            <button (click)="searchRides()" class="rounded-pill button-search btn btn-block">
+                                <span class="pi pi-search"></span> Join
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
