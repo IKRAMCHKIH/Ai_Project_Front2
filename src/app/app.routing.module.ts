@@ -9,7 +9,12 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './home/home.component';
+
 import { UserProfileComponent } from './user-profile/user-profile.component';
+
+import { DisplayOffreComponent } from './display-offre/display-offre.component';
+import { AddOfferComponent } from './add-offer/add-offer.component';
+
 
 
 
@@ -22,12 +27,19 @@ const routes: Routes = [
   { path: 'login', component: UserloginComponent },
   { path: 'adminlogin', component: AdminloginComponent },
   { path: 'register', component: UserregisterComponent },
-  { path: 'home', component: HomepageComponent },
+  { path: 'CarPooling', component: HomepageComponent },
   { path: 'userDashboard', component: UserDashboardComponent },
   { path: 'adminDashboard', component: AdminDashboardComponent },
+
   { path: 'UserProfile', component: UserProfileComponent },
 
    { path: 'ikr', component: HomeComponent }
+
+
+  { path: 'displayOffre', component: DisplayOffreComponent },
+   { path: 'ikr', component: HomeComponent },
+  { path: 'Home', component: HomeComponent },
+  { path: 'addOff', component: AddOfferComponent },
 
 ];
 

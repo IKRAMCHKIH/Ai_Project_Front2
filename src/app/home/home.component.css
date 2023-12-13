@@ -141,3 +141,36 @@ body {
 .thumbnail{
     background-color: rgba(230, 230, 230);
 }
+/* Add your custom styles for the cards in the "Pourquoi Choisir #xshore ?" section */
+#features .card {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  #features .card-body {
+    padding: 20px;
+  }
+  
+  #features h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #features span.text-600 {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  #features .d-flex align-items-center justify-content-center {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin-bottom: 15px;
+  }
+  
+  #features i {
+    font-size: 24px;
+    color: #333;
+  }
+  
