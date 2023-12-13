@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-
+import * as swal from 'sweetalert';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -38,4 +38,11 @@ export class HomeComponent implements OnInit {
     // Navigate to the 'CarPooling' page
     this.router.navigate(['/CarPooling']);
   }
+  contact(){
+    swal({
+      title: "Thank you!",
+      icon: "success",
+    });
+  }
+
 }

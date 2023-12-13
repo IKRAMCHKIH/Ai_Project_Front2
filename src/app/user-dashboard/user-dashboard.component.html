@@ -46,8 +46,8 @@
           <div style="padding:4px;">
               <div><span style="font-size:14px;"><b>Source : </b></span><span>{{usercab.source}}</span></div>
               <div><span style="font-size:14px;"><b>Destination : </b></span><span>{{usercab.destination}}</span></div>
-              <div><span style="font-size:14px;"><b>Pick up time : </b></span><span>{{usercab.pickup}}</span></div>
-              <div><span style="font-size:14px;"><b>Drop time : </b></span><span>{{usercab.dropoff}}</span></div>
+              <div><span style="font-size:14px;"><b>Pick up time : </b></span><span>{{usercab.date}}</span></div>
+              <div><span style="font-size:14px;"><b>Drop time : </b></span><span>{{usercab.time}}</span></div>
               <div><span style="font-size:14px;"><b>Driver Name : </b></span><span>{{usercab.driverName}}</span></div>
               <div><span style="font-size:14px;"><b>Driver Mobile : </b></span><span>{{usercab.driverMob}}</span></div>
           </div>
@@ -78,7 +78,7 @@
         </thead>
         <tbody>
         <ng-container *ngFor="let cab of this.cabbyid; let i = index">
-          <tr *ngIf="cab.driverAuth==1" >
+          <!-- <tr *ngIf="cab.driverAuth==1" > -->
             <td class="hidden">{{cab.cid}}</td>
             <td>{{cab.source}}</td>
             <td>{{cab.destination}}</td>
@@ -89,7 +89,7 @@
             <td>{{cab.driverMob}}</td>
             <td ><button class="btn btn-primary" [attr.title]="tripstatus!='false' ? 'Cancel your current cab to opt for new cab' : 'Opt Cab'" [disabled]="tripstatus!='false'"  (click)="optcab(cab.cid,i)">Opt Cab</button>
             </td>
-          </tr>
+          <!-- </tr> -->
         </ng-container>
         </tbody>
       </table>

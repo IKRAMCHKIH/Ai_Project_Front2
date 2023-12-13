@@ -11,12 +11,13 @@
         </div>
         <div class="col-md-3 d-flex justify-content-between">
             <button (click)="searchRides()" class="rounded-pill button-search btn btn-block">
-                <span class="pi pi-search"></span> Search
+                <span class="pi pi-search"></span> <i class="fa fa-search" aria-hidden="true"></i>
+
             </button>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-6 mb-4" *ngFor="let ride of filteredRides; let even = even">
+        <div class="col-md-6 mb-4" *ngFor="let ride of filteredRides; let even = even" (click)="searchRides(ride)">
             <div class="card h-100 shadow">
                 <div class="card-body">
                     <div class="row g-0">

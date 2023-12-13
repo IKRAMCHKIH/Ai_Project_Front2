@@ -18,17 +18,17 @@ export class UserregisterComponent  {
 
   }
 
-  // createUser(): void {
-  //     this.userregisterService.createUser(this.user)
-  //       .subscribe( data => {
-  //         sweetalert({
-  //             title: "Registration Successfull!",
-  //             text:"Please Login to Continue",
-  //             icon: "success",
-  //           });
-  //       });
+  createUser(): void {
+      this.userregisterService.createUser(this.user)
+        .subscribe( data => {
+          sweetalert({
+              title: "Registration Successfull!",
+              text:"Please Login to Continue",
+              icon: "success",
+            });
+        });
 
-  // };
+  };
 
 }
 

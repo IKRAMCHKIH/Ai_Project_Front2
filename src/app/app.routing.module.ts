@@ -11,7 +11,7 @@ import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.compone
 import { HomeComponent } from './home/home.component';
 import { DisplayOffreComponent } from './display-offre/display-offre.component';
 import { AddOfferComponent } from './add-offer/add-offer.component';
-
+import { NotificationComponent } from './notification/notification.component';
 
 
 
@@ -27,9 +27,9 @@ const routes: Routes = [
   { path: 'userDashboard', component: UserDashboardComponent },
   { path: 'adminDashboard', component: AdminDashboardComponent },
   { path: 'displayOffre', component: DisplayOffreComponent },
-   { path: 'ikr', component: HomeComponent },
   { path: 'Home', component: HomeComponent },
   { path: 'addOff', component: AddOfferComponent },
+  { path: 'notif', component: NotificationComponent },
 ];
 
 @NgModule({
