@@ -19,7 +19,7 @@ export class UserdashboardService {
   private cabUrld = 'http://localhost:8080/user-portal/cab';
   private tripUrl = 'http://localhost:8080/user-portal/trips';
   private singletripUrl = 'http://localhost:8080/user-portal/trips/viewusertrip';
-  private usercab = 'http://localhost:8080/user-portal/cab/viewusercab';
+  
 
 
 
@@ -28,9 +28,7 @@ export class UserdashboardService {
     return this.http.post<Cab>(this.cabUrl,cab);
   }
 
-  public getUserCab(cab) {
-    return this.http.post<Cab>(this.usercab,cab);
-  }
+  
 
   public optcab(trip) {
     return this.http.post<Trip>(this.tripUrl,trip);
