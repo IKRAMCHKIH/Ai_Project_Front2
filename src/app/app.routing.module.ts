@@ -9,6 +9,7 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'userDashboard', component: UserDashboardComponent },
   { path: 'adminDashboard', component: AdminDashboardComponent },
+  { path: 'UserProfile', component: UserProfileComponent },
 
    { path: 'ikr', component: HomeComponent }
 
