@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as swal from 'sweetalert';
+import { DisplayOffServiceService } from '../services/display-off-service.service';
 
 @Component({
   selector: 'app-display-offre',
@@ -20,7 +22,7 @@ export class DisplayOffreComponent implements OnInit {
     date: ''
   };
 
-  constructor() { }
+  constructor(private DisplayOffServiceService: DisplayOffServiceService) {}
 
   ngOnInit() {
      this.rides = [
@@ -35,11 +37,17 @@ export class DisplayOffreComponent implements OnInit {
      this.filteredRides = this.rides;
   }
 
-  searchRides() {
-     this.filteredRides = this.rides.filter(ride =>
+  searchRides(selectedRide: any) {
+    this.filteredRides = this.rides.filter(ride =>
       ride.departure.toLowerCase().includes(this.searchParams.departure.toLowerCase()) &&
       ride.destination.toLowerCase().includes(this.searchParams.destination.toLowerCase()) &&
       ride.date.includes(this.searchParams.date)
     );
+
+    swal({
+      title: "Ride Details",
+      text: `Driver Name: ${selectedRide.driverName}\nDate: ${selectedRide.date}\nTime: ${selectedRide.time}\nDeparture: ${selectedRide.departure}\nDestination: ${selectedRide.destination}\nPrice: ${selectedRide.price}\nAvailable Places: ${selectedRide.availablePlaces}`,
+      icon: "info",
+    });
   }
 }

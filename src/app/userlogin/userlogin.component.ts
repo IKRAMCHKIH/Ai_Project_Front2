@@ -22,29 +22,30 @@ export class UserloginComponent {
 	    this.userloginService.checkUser(this.user)
 	      .subscribe( data => {
 	        if(!data){
-            // sweetalert({
-            //     title: "Wrong Email or Password",
-            //     icon: "error",
-            //   });
+            sweetalert({
+                title: "Wrong Email or Password",
+                icon: "error",
+              });
 
             return;
 	        }else if(!data.id)
         	{
-	        	// sweetalert({
-            //     title: "Wrong Email or Password",
-            //     icon: "error",
-            //   });
+	        	sweetalert({
+                title: "Wrong Email or Password",
+                icon: "error",
+              });
 
              return;
         	}else{
-        		sessionStorage.setItem('userId', data.id);
-            sessionStorage.setItem('userCid', data.companyName);
-            sessionStorage.setItem('userName', data.fullName);
+        	  sessionStorage.setItem('userId', data.id);
+            sessionStorage.setItem('userCid', data.last_name);
+            sessionStorage.setItem('userName', data.first_name);
 
-            // sweetalert({
-            //     title: "Login Successfull!",
-            //     icon: "success",
-            //   });
+            console.log("user", data.id);
+            sweetalert({
+                title: "Login Successfull!",
+                icon: "success",
+              });
 
             this.router.navigate(['/userDashboard']);
         	}
