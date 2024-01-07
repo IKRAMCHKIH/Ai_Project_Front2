@@ -1,7 +1,7 @@
 <div class="container">
     <div class="mt-5 mx-5 row mb-4">
         <div class="col-md-3">
-            <input type="text" class="form-control custom-input" placeholder="Departure" [(ngModel)]="searchParams.departure">
+            <input type="text" class="form-control custom-input" placeholder="source" [(ngModel)]="searchParams.source">
         </div>
         <div class="col-md-3">
             <input type="text" class="form-control custom-input" placeholder="Destination" [(ngModel)]="searchParams.destination">
@@ -17,8 +17,8 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-6 mb-4" *ngFor="let cab of cabbyid" (click)="searchRides(cab)">
-            <div class="card h-100 shadow">
+        <div class="col-md-6 mb-4" *ngFor="let cab of filteredRides">
+                        <div class="card h-100 shadow">
                 <div class="card-body">
                     <div class="row g-0">
 
@@ -36,11 +36,10 @@
                                 <span class="badge bg-secondary">Price:</span> {{cab.price}} dhs
                             </p>
                             <p class="card-text"><strong>Available Places:</strong> {{cab.places}}</p>
-                            <button (click)="searchRides()" class="rounded-pill button-search btn btn-block">
+                            <button (click)="searchides(cab.cid)" class="rounded-pill button-search btn btn-block">
                                 <span class="pi pi-search"></span> Join
                             </button>
                         </div>
-                    
                     </div>
                 </div>
             </div>

@@ -18,17 +18,14 @@
             <div class="notification-list" *ngFor="let notification of notif">
               <div class="notification-list_content">
                 <div class="notification-list_img">
-                  <img [src]="notification.imageUrl" alt="user">
+                  <img src="{{ rides }}" alt="{{ rides }}" >
                 </div>
                 <div class="notification-list_detail">
-                  <p><b>{{ notification.location }}</b> {{ notification.destination }}</p>
-                  <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, dolorem.</p>
-                  <p class="text-muted"><small>{{ notification.message }}</small></p>
+                  <p><b>{{ notification.location }}</b>==><b>{{ notification.destination }}</b></p>
+                  <p class="text-muted">{{ notification.message }}</p>
                 </div>
               </div>
-              <div class="notification-list_feature-img">
-                <img [src]="notification.featureImageUrl" alt="Feature image">
-              </div>
+            
             </div>
           </div>
       

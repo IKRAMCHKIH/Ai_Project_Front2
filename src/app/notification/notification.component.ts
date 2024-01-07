@@ -10,11 +10,15 @@ import { Notif } from '../models/notif';
 })
 export class NotificationComponent implements OnInit {
   notifications: any[] = [];
+  rides: any[] = [];
   constructor(private router: Router,private displayOffServiceService: DisplayOffServiceService) { }
   notif: Notif[];
   userName:string;
   userid:string;
   ngOnInit() {
+    this.rides = [
+      'https://source.unsplash.com/400x200/?car',
+    ];
     this.notifications = [
       { user: 'John Doe', action: 'reacted to your post', time: '10 mins ago', imageUrl: 'https://i.imgur.com/zYxDCQT.jpg', featureImageUrl: 'https://i.imgur.com/AbZqFnR.jpg' },
       // Add more notification objects as needed

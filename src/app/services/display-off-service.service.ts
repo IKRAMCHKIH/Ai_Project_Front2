@@ -19,6 +19,10 @@ export class DisplayOffServiceService {
   private userUrl = 'http://localhost:8080/users/user';
   private userNotif ='http://localhost:8080/users/notif';
 
+  public getCabs2() {
+
+    return this.http.get<Cab[]>(this.cabUrld);
+  }
   public getCabs() {
 
     return this.http.get<Cab>(this.cabUrld);
