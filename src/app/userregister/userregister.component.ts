@@ -13,22 +13,31 @@ import { UserregisterService } from './userregister.service';
 export class UserregisterComponent  {
 
   user: User = new User();
+  
+
 
   constructor(private router: Router, private userregisterService: UserregisterService) {
 
   }
 
   createUser(): void {
-      this.userregisterService.createUser(this.user)
-        .subscribe( data => {
-          sweetalert({
-              title: "Registration Successfull!",
-              text:"Please Login to Continue",
-              icon: "success",
-            });
+    if (this.user.fullName.trim() === "") {
+      sweetalert({
+        title: "Registration is not satisfactory",
+        text: "Please enter your Full Name",
+        icon: "error",
+      });
+    } else {
+      // Perform API call or other actions
+      this.userregisterService.createUser(this.user).subscribe((data) => {
+        sweetalert({
+          title: "Registration Successful!",
+          text: "Please Login to Continue",
+          icon: "success",
         });
-
-  };
+      });
+    }
+  }
 
 }
 

@@ -29,7 +29,10 @@ export class HomepageComponent implements OnInit {
    	  this.router.navigate(['/login']);
   	}
      }
+
+
      navigateTo() {
       this.router.navigate(['/displayOffre']);
     }
+    
 }
