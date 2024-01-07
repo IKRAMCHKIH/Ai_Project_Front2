@@ -9,15 +9,17 @@ import * as swal from 'sweetalert';
 export class HomeComponent implements OnInit {
   @ViewChild('contactSection') contactSection: ElementRef;
   @ViewChild('aboutSection') aboutSection: ElementRef;
- 
+  userName:string;
+ userid:string;
 
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.userName=sessionStorage.getItem('userName');
+    this.userid=sessionStorage.getItem('userId');
   }
   navigateToComponent() {
-  
     this.router.navigate(['/CarPooling']);
   }
   scrollToContact() {
@@ -36,6 +38,15 @@ export class HomeComponent implements OnInit {
   }
   navigateToCarPooling() {
     // Navigate to the 'CarPooling' page
+    if(!sessionStorage.getItem('userId'))
+  	{
+      swal({
+          title: "Login To Continue!!",
+          icon: "error",
+        });
+   	  this.router.navigate(['/login']);
+
+  	}
     this.router.navigate(['/CarPooling']);
   }
   contact(){

@@ -1,14 +1,13 @@
 export class Cab {
-		
   cid: string;
   companyName	: string;
   driverName: string;
-  vacantSpace: string;
+  places: number;
   source: string;
   destination: string;
-  pickup: string;
-  dropoff: string;
-  driverAuth: string;
   driverMob : string;
-  comanyId: string;
+  date:string;
+  time:string;
+  companyId: string;
+  price:number;
 }

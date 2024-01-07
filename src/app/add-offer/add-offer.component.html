@@ -14,40 +14,31 @@
       <div class="container1">
         <h2>Add New Offer</h2>
   
-        <label for="fullName"><b>Nom et prénom du conducteur</b></label>
-        <input class="form-control" [(ngModel)]="user.fullName" type="text" placeholder="Enter Nom et prénom du conducteur" name="fullName" required>
-  
-        <label for="companyName"><b>Marque de voiture</b></label>
-        <input class="form-control" [(ngModel)]="user.companyName" type="text" placeholder="Enter Marque de voiture" name="companyName" required>
+        <label for="fullName"><b>Driver Name</b></label>
+        <input class="form-control" [(ngModel)]="cabC.driverName" type="text" placeholder="Enter Nom et prénom du conducteur" name="fullName" required>
+        <label for="fullName"><b>Driver Mobile</b></label>
+        <input class="form-control" [(ngModel)]="cabC.driverMob" type="text" placeholder="Enter Nom et prénom du conducteur" name="fullName" required>
+        <label for="companyName"><b>company name</b></label>
+        <input class="form-control" [(ngModel)]="cabC.companyName" type="text" placeholder="Enter Marque de voiture" name="companyName" required>
   
         <label for="employeeId"><b>Destination</b></label>
-        <input class="form-control" type="text" [(ngModel)]="user.employeeId" placeholder="Enter Destination" name="destination" required>
+        <input class="form-control" type="text" [(ngModel)]="cabC.destination" placeholder="Enter Destination" name="destination" required>
   
-        <label for="email"><b>Depart</b></label>
-        <input class="form-control" type="text" [(ngModel)]="user.email" placeholder="Enter Depart" name="depart" required>
+        <label for="email"><b>Source</b></label>
+        <input class="form-control" type="text" [(ngModel)]="cabC.source" placeholder="Enter Depart" name="depart" required>
   
         <label for="date"><b>Date</b></label>
-        <input class="form-control" type="date" [(ngModel)]="user.date" name="date" required>
-  
-        <label for="heure"><b>Heure</b></label>
-        <div class="input-group">
-          <select class="form-control" [(ngModel)]="user.selectedHour" name="selectedHour" required>
-            <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
-          </select>
-          <span>:</span>
-          <select class="form-control" [(ngModel)]="user.selectedMinute" name="selectedMinute" required>
-            <option *ngFor="let minute of minutes" [value]="minute">{{ minute }}</option>
-          </select>
-        </div>
-        
+        <input class="form-control" type="date" [(ngModel)]="cabC.date" name="date" required>
+        <label for="password"><b>Time</b></label>
+        <input class="form-control" type="text" [(ngModel)]="cabC.time" placeholder="Enter Prix de place" name="prixPlace" required>
 
-        <label for="nbrPlaces"><b>Nbr de places</b></label>
-        <input class="form-control" type="number" [(ngModel)]="user.nbrPlaces" placeholder="Enter Nbr de places" name="nbrPlaces" min="1" max="5" required>
+        <label for="nbrPlaces"><b>Places</b></label>
+        <input class="form-control" type="number" [(ngModel)]="cabC.places" placeholder="Enter Nbr de places" name="nbrPlaces" min="1" max="5" required>
   
-        <label for="password"><b>Prix de place</b></label>
-        <input class="form-control" type="text" [(ngModel)]="user.password" placeholder="Enter Prix de place" name="prixPlace" required>
+        <label for="password"><b>Price</b></label>
+        <input class="form-control" type="text" [(ngModel)]="cabC.price" placeholder="Enter Prix de place" name="prixPlace" required>
   
-        <button (click)="createUser()">Submit</button>
+        <button (click)="createCab()">Submit</button>
       </div>
   
       <div class="container1" style="background-color:#f1f1f1">

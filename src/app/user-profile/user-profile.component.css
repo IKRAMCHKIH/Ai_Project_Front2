@@ -11,7 +11,7 @@
 }
 
 .custom-input {
-    border: 2px solid #3e587b;
+    border: 2px solid #18375f;
     border-radius: 5px;
     padding-left: 5px;
     padding: 8px;
@@ -24,7 +24,7 @@
 }
 
 .custom-input:focus {
-    border-color: #17a2b8;
+    border-color: #18375f;
 }
 
 
@@ -89,5 +89,5 @@ body {
     margin-right: .5rem !important;
 }
 .btn1{
-    background-color: #3e587b;
+    background-color: #18375f;
 }
