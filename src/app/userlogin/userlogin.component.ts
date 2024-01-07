@@ -38,8 +38,8 @@ export class UserloginComponent {
              return;
         	}else{
         	  sessionStorage.setItem('userId', data.id);
-            sessionStorage.setItem('userCid', data.last_name);
-            sessionStorage.setItem('userName', data.first_name);
+            sessionStorage.setItem('userCid', data.first_name);
+            sessionStorage.setItem('userName', data.last_name);
 
             console.log("user", data.id);
             sweetalert({
@@ -47,7 +47,7 @@ export class UserloginComponent {
                 icon: "success",
               });
 
-            this.router.navigate(['/userDashboard']);
+            this.router.navigate(['/CarPooling']);
         	}
 	      });
 	}

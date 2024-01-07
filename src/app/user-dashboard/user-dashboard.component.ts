@@ -28,10 +28,10 @@ export class UserDashboardComponent implements OnInit {
   ngOnInit() {
 	if(!sessionStorage.getItem('userId'))
   	{
-      // sweetalert({
-      //     title: "Login To Continue!!",
-      //     icon: "error",
-      //   });
+      swal({
+          title: "Login To Continue!!",
+          icon: "error",
+        });
    	  this.router.navigate(['/login']);
   	}
 

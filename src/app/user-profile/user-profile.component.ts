@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { Cab } from '../models/cab.model';
 import { Trip } from '../models/trip.model';
 import * as sweetalert from 'sweetalert';
-
+import { DisplayOffServiceService } from '../services/display-off-service.service';
+import { User } from '../models/user.model';
 
 
 
@@ -13,6 +14,10 @@ import * as sweetalert from 'sweetalert';
   styleUrls: ["./user-profile.component.css"],
 })
 export class UserProfileComponent implements OnInit {
+  cabs: Cab[];
+  userName:string;
+  userid:string;
+  user: User=new User();
 
    isActive: boolean = false;
   rides: any[] = [];
@@ -25,7 +30,8 @@ export class UserProfileComponent implements OnInit {
     this.showCard = !this.showForm;
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private DisplayOffServiceService: DisplayOffServiceService) {}
+
 
   ngOnInit() {
     this.rides = [
@@ -35,8 +41,16 @@ export class UserProfileComponent implements OnInit {
     ];
     
      this.filteredRides = this.rides;
-   
-  
+     this.userName=sessionStorage.getItem('userName');
+     this.userid=sessionStorage.getItem('userId');
+     this.DisplayOffServiceService.getCabsbyID(this.userid)
+     .subscribe(data =>{
+      this.cabs=data;
+     })
+     this.DisplayOffServiceService.userbyID(this.userid)
+     .subscribe(data =>{
+      this.user=data;
+     })
   }
    deleteRide(ride: any) {
     const index = this.filteredRides.indexOf(ride);
