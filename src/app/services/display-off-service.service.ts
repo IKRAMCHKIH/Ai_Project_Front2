@@ -14,10 +14,10 @@ export class DisplayOffServiceService {
 
   constructor(private http:HttpClient) {}
 
-  private cabUrl = 'http://localhost:8080/users/cabs';
-  private cabUrld = 'http://localhost:8080/cab';
-  private userUrl = 'http://localhost:8080/users/user';
-  private userNotif ='http://localhost:8080/users/notif';
+  private cabUrl = 'https://test2-xshore.azurewebsites.net/users/cabs';
+  private cabUrld = 'https://test2-xshore.azurewebsites.net/cab';
+  private userUrl = 'https://test2-xshore.azurewebsites.net/users/user';
+  private userNotif ='https://test2-xshore.azurewebsites.net/users/notif';
 
   public getCabs2() {
 

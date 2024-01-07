@@ -9,4 +9,5 @@ export class User {
   location: string;
   destination: string;  
   Cab : [];
+  fullName: any;
 }

@@ -15,10 +15,10 @@ export class UserdashboardService {
 
   constructor(private http:HttpClient) {}
 
-  private cabUrl = 'http://localhost:8080/user-portal/cab/bycid';
-  private cabUrld = 'http://localhost:8080/user-portal/cab';
-  private tripUrl = 'http://localhost:8080/user-portal/trips';
-  private singletripUrl = 'http://localhost:8080/user-portal/trips/viewusertrip';
+  private cabUrl = 'https://test2-xshore.azurewebsites.net/cab/bycid';
+  private cabUrld = 'https://test2-xshore.azurewebsites.net/cab';
+  private tripUrl = 'https://test2-xshore.azurewebsites.net/trips';
+  private singletripUrl = 'https://test2-xshore.azurewebsites.net/trips/viewusertrip';
   
 
 

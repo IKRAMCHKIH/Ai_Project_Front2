@@ -14,8 +14,8 @@ export class UserregisterService {
 
   constructor(private http:HttpClient) {}
 
-  private userUrl = 'http://localhost:8080/users';
-  private userCab = 'http://localhost:8080/users/addCab';
+  private userUrl = 'https://test2-xshore.azurewebsites.net/users';
+  private userCab = 'https://test2-xshore.azurewebsites.net/users/addCab';
   
   //private userUrl = '/api';
   public createUser(user) {

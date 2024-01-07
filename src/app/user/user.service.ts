@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private http:HttpClient) {}
 
-  private userUrl = 'http://localhost:8080/users';
+  private userUrl = 'https://test2-xshore.azurewebsites.net/users';
   //private userUrl = '/api';
 
   public getUsers() {
